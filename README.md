@@ -1,2 +1,2 @@
 # firstproject
-Just Nothing
+just nothing
