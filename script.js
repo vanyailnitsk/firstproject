@@ -1,17 +1,21 @@
-let str="AABBBBBBBBBBCCCCCCDDDDDEEEDFGDG";
-console.log(str.length);
-let MaxCount="";
-let count="";
-for (let i=0;i<str.length-1;i++){
-    if (str[i]==str[i+1]){
-        count=count.concat(str[i]);
-        if (str[i+1]!=str[i+2]){
-            count=count.concat(str[i+1]);
-        }
-        if (count.length>MaxCount.length){    
-            MaxCount=count;
-        }
-    }       
-    else {count="";}
-}
-console.log(MaxCount);
+let numberOfFilms=+prompt("Сколько фильмов вы уже посмотрели?");
+
+let personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors:{},
+    genres:[],
+    privat:false,
+};
+
+let title=prompt("Один из последних просмотренных фильмов?");
+let rating=prompt("На сколько оцените его?");
+personalMovieDB.movies[title]=rating;
+
+title=prompt("Один из последних просмотренных фильмов?");
+rating=prompt("На сколько оцените его?");
+personalMovieDB.movies[title]=rating;
+
+console.log(personalMovieDB);
+console.log(typeof(Object.keys(personalMovieDB.movies)));
+
